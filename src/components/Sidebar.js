@@ -7,6 +7,8 @@ import {
   FaCertificate,
   FaCog,
   FaSignOutAlt,
+  FaWallet,
+FaVideo,
   FaChevronRight,
   FaBolt,
   FaBook,
@@ -262,7 +264,19 @@ function Sidebar() {
         icon:<FaUserCheck />,
         path:"/manage-attendance",
         sub:"Faculty controls"
-      },
+      },{
+  title:"Fee Management",
+  icon:<FaWallet />,
+  path:"/fees",
+  sub:"Student payments"
+},
+
+{
+  title:"Online Classes",
+  icon:<FaVideo />,
+  path:"/online-classes",
+  sub:"Live class sessions"
+},
 
       {
         title:"Certificates",
@@ -363,7 +377,19 @@ function Sidebar() {
         path:"/attendance",
         sub:"Attendance system"
       },
+{
+  title:"Fee Management",
+  icon:<FaWallet />,
+  path:"/fees",
+  sub:"Manage payments"
+},
 
+{
+  title:"Online Classes",
+  icon:<FaVideo />,
+  path:"/online-classes",
+  sub:"Conduct live classes"
+},
       {
         title:"Manage Attendance",
         icon:<FaUserCheck />,
@@ -435,7 +461,19 @@ else if(userRole === "student"){
       path: "/assignments",
       sub: "Submit tasks"
     },
+{
+  title:"Fee Management",
+  icon:<FaWallet />,
+  path:"/fees",
+  sub:"Pay fees online"
+},
 
+{
+  title:"Online Classes",
+  icon:<FaVideo />,
+  path:"/online-classes",
+  sub:"Join live classes"
+},
     {
       title: "Attendance",
       icon: <FaUserCheck />,
@@ -515,6 +553,19 @@ else if(userRole === "student"){
         path:"/progress",
         sub:"Performance tracking"
       },
+      {
+  title:"Fee Management",
+  icon:<FaWallet />,
+  path:"/fees",
+  sub:"Pay fees online"
+},
+
+{
+  title:"Online Classes",
+  icon:<FaVideo />,
+  path:"/online-classes",
+  sub:"Join live classes"
+},
 
       {
         title:"Settings",

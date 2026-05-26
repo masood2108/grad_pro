@@ -13,7 +13,7 @@ import Assignments from "./pages/Assignments"
 import AssignmentSubmissions from "./pages/AssignmentSubmissions"
 import CertificatePreview from "./pages/CertificatePreview"
 import StudentProgress from "./pages/StudentProgress"
-
+import OnlineClasses from "./pages/OnlineClasses"
 import Attendance from "./pages/Attendance"
 import StudentAttendance from "./pages/StudentAttendance"
 import ManageAttendance from "./pages/ManageAttendance"
@@ -73,6 +73,10 @@ function App() {
 <Route
   path="/notifications"
   element={<Notifications />}
+/>
+<Route
+path="/online-classes"
+element={<OnlineClasses />}
 />
 <Route
 
