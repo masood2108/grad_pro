@@ -1,10 +1,7 @@
 import { useState, useRef } from "react"
-
 import Sidebar from "./Sidebar"
 import Navbar from "./Navbar"
-
 import {
-
   FaCloudUploadAlt,
   FaImage,
   FaCheckCircle,
@@ -14,220 +11,115 @@ import {
   FaCertificate,
   FaUsers,
   FaArrowRight
-
 } from "react-icons/fa"
-
 function CloudinaryUpload() {
-
   const [imageUrl, setImageUrl] = useState("")
-
   const [loading, setLoading] = useState(false)
-
   const [dragActive, setDragActive] = useState(false)
-
   const [fileDetails, setFileDetails] = useState(null)
-
   const fileInputRef = useRef(null)
-
   const handleDrag = (e) => {
-
     e.preventDefault()
-
     e.stopPropagation()
-
     if (
       e.type === "dragenter" ||
       e.type === "dragover"
     ){
-
       setDragActive(true)
-
     }
-
     else if(e.type === "dragleave"){
-
       setDragActive(false)
-
     }
-
   }
-
   const handleDrop = async (e) => {
-
     e.preventDefault()
-
     e.stopPropagation()
-
-    setDragActive(false)
-
+setDragActive(false)
     if (
       e.dataTransfer.files &&
       e.dataTransfer.files[0]
     ){
-
       const file = e.dataTransfer.files[0]
-
       setFileDetails({
-
         name:file.name,
-
         size:(file.size / 1024 / 1024).toFixed(2),
-
         type:file.type
-
       })
-
       await performUpload(file)
-
     }
-
   }
-
   const handleFileChange = async (e) => {
-
     const file = e.target.files[0]
-
     if(!file) return
-
     setFileDetails({
-
       name:file.name,
-
       size:(file.size / 1024 / 1024).toFixed(2),
-
       type:file.type
-
     })
-
     await performUpload(file)
-
   }
-
   const performUpload = async (file) => {
-
     setLoading(true)
-
     try{
-
       const formData = new FormData()
-
       formData.append("file", file)
-
       formData.append(
         "upload_preset",
         "99dxxxx"
       )
-
       const response = await fetch(
-
         "https://api.cloudinary.com/v1_1/dvic2uies/image/upload",
-
         {
           method:"POST",
           body:formData
         }
-
       )
-
       const data = await response.json()
-
       if(data.secure_url){
-
         setImageUrl(data.secure_url)
-
         alert("Asset Uploaded Successfully")
-
       }
-
       else{
-
         alert("Upload Failed")
-
       }
-
     }
-
     catch(error){
-
       console.log(error)
-
       alert("Upload Failed")
-
     }
-
     setLoading(false)
-
   }
-
   return (
-
     <div className="flex bg-[#030014] text-zinc-100 min-h-screen relative overflow-hidden font-sans">
-
-      {/* BACKGROUND */}
-
       <div className="absolute top-[10%] left-[20%] w-[50%] h-[50%] radial-glow-violet pointer-events-none z-0 opacity-40" />
-
       <div className="absolute bottom-[10%] right-[10%] w-[50%] h-[50%] radial-glow-cyan pointer-events-none z-0 opacity-40" />
-
       <div className="absolute inset-0 tech-grid opacity-20 pointer-events-none z-0" />
-
-      {/* SIDEBAR */}
-
       <Sidebar />
-
-      {/* MAIN */}
-
       <div className="flex-1 p-8 overflow-y-auto max-h-screen relative z-10">
-
         <Navbar />
-
-        {/* HERO */}
-
         <div className="glass-panel rounded-3xl border border-white/[0.05] p-8 mb-8 relative overflow-hidden">
-
           <div className="absolute top-0 right-0 w-[250px] h-[250px] bg-purple-500/10 blur-3xl rounded-full" />
-
           <div className="relative z-10">
-
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-bold tracking-wider mb-5">
-
               <FaCloudUploadAlt />
-
               EVENT ASSET MANAGEMENT
-
             </div>
-
             <h1 className="text-4xl font-extrabold leading-tight">
-
               Upload Event Assets
               <span className="block text-gradient-primary mt-2">
-
                 Posters, Certificates & Media
-
               </span>
-
             </h1>
-
             <p className="text-zinc-400 mt-6 max-w-3xl text-lg leading-relaxed">
-
               Manage hackathon posters,
               sponsor logos, event banners,
               volunteer media, certificates,
               and college event assets through
               the centralized EventSphere cloud.
-
             </p>
-
           </div>
-
         </div>
-
-        {/* GRID */}
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-          {/* LEFT */}
-
           <div className="lg:col-span-2">
 
             <div className="glass-panel p-8 rounded-3xl border border-white/[0.05]">
@@ -247,7 +139,6 @@ function CloudinaryUpload() {
 
               </div>
 
-              {/* DROPZONE */}
 
               <div
 
@@ -348,11 +239,9 @@ function CloudinaryUpload() {
 
           </div>
 
-          {/* RIGHT */}
 
           <div className="space-y-6">
 
-            {/* PREVIEW */}
 
             <div className="glass-panel p-6 rounded-3xl border border-white/[0.05]">
 
@@ -541,7 +430,6 @@ function CloudinaryUpload() {
 
             </div>
 
-            {/* QUICK MODULES */}
 
             <div className="glass-panel p-6 rounded-3xl border border-white/[0.05]">
 

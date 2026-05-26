@@ -107,11 +107,9 @@ function Settings() {
 
     <MainLayout>
 
-      {/* MAIN */}
 
       <div className="flex-1 min-w-0 relative overflow-hidden">
 
-        {/* BACKGROUND */}
 
         <div className="absolute top-[-220px] right-[-120px] w-[500px] h-[500px] bg-violet-300/20 blur-[140px] rounded-full pointer-events-none" />
 
@@ -119,8 +117,6 @@ function Settings() {
 
         <div className="h-full overflow-y-auto overflow-x-hidden p-6 relative z-10">
 
-
-          {/* HERO */}
 
           <motion.div
 
@@ -142,7 +138,6 @@ function Settings() {
 
           >
 
-            {/* BG */}
 
             <div className="absolute top-[-120px] right-[-80px] w-[300px] h-[300px] bg-violet-300/20 blur-[120px] rounded-full" />
 
@@ -150,7 +145,6 @@ function Settings() {
 
             <div className="relative z-10 p-10 md:p-14 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10">
 
-              {/* LEFT */}
 
               <div>
 
@@ -178,7 +172,6 @@ function Settings() {
 
                 </p>
 
-                {/* STATS */}
 
                 <div className="flex flex-wrap gap-5 mt-10">
 
@@ -222,7 +215,6 @@ function Settings() {
 
               </div>
 
-              {/* RIGHT */}
 
               <motion.div
 
@@ -248,11 +240,9 @@ function Settings() {
 
           </motion.div>
 
-          {/* SETTINGS GRID */}
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-7 mt-8">
 
-            {/* PROFILE */}
 
             <GlassCard>
 
@@ -289,7 +279,6 @@ function Settings() {
 
               </div>
 
-              {/* FORM */}
 
               <div className="space-y-6 mt-10">
 
@@ -341,7 +330,6 @@ function Settings() {
 
             </GlassCard>
 
-            {/* ORGANIZATION */}
 
             <GlassCard>
 
@@ -424,7 +412,6 @@ function Settings() {
 
             </GlassCard>
 
-            {/* NOTIFICATIONS */}
 
             <GlassCard>
 
@@ -524,7 +511,6 @@ function Settings() {
 
             </GlassCard>
 
-            {/* SECURITY */}
 
             <GlassCard>
 
@@ -552,7 +538,6 @@ function Settings() {
 
               </div>
 
-              {/* MODE */}
 
               <div className="mt-10 rounded-[30px] bg-[#f8f4ef] border border-black/5 p-6 flex items-center justify-between gap-5">
 
@@ -646,7 +631,6 @@ function Settings() {
 
               </div>
 
-              {/* SECURITY LEVEL */}
 
               <div className="mt-6 rounded-[30px] bg-black text-white p-6">
 
@@ -679,7 +663,6 @@ function Settings() {
 
           </div>
 
-          {/* SAVE BUTTON */}
 
           <motion.button
 

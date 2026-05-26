@@ -390,7 +390,6 @@ function Navbar() {
 
         <div className="relative z-10 flex items-center justify-between gap-6 flex-wrap">
 
-          {/* LEFT */}
 
           <div className="flex-1 min-w-[280px]">
 
@@ -478,11 +477,9 @@ function Navbar() {
 
           </div>
 
-          {/* RIGHT */}
 
           <div className="flex items-center gap-4 ml-auto flex-wrap">
 
-            {/* SEARCH */}
 
             <motion.div
 
@@ -555,7 +552,6 @@ function Navbar() {
 
             </motion.div>
 
-            {/* NOTIFICATIONS */}
 
             <motion.button
 
@@ -616,7 +612,6 @@ function Navbar() {
 
             </motion.button>
 
-            {/* DARK MODE */}
 
             <motion.button
 
@@ -637,7 +632,6 @@ function Navbar() {
 
             </motion.button>
 
-            {/* PROFILE */}
 
             <div
               className="relative"

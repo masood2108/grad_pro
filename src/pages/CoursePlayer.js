@@ -88,7 +88,6 @@ function CoursePlayer() {
   const [progressPercentage, setProgressPercentage] =
   useState(0)
 
-  /* USER ROLE */
 
   useEffect(() => {
 
@@ -125,7 +124,6 @@ function CoursePlayer() {
 
   }, [])
 
-  /* COURSE */
 
   useEffect(() => {
 
@@ -168,7 +166,6 @@ function CoursePlayer() {
 
   }, [id])
 
-  /* LESSONS */
 
   useEffect(() => {
 
@@ -223,7 +220,6 @@ function CoursePlayer() {
 
   }, [id])
 
-  /* PROGRESS */
 
   useEffect(() => {
 
@@ -290,7 +286,6 @@ function CoursePlayer() {
 
   }, [id])
 
-  /* PROGRESS PERCENT */
 
   useEffect(() => {
 
@@ -313,7 +308,6 @@ function CoursePlayer() {
 
   }, [completedLessons, lessons])
 
-  /* RESET */
 
   const resetForm = () => {
 
@@ -325,7 +319,6 @@ function CoursePlayer() {
 
   }
 
-  /* COMPLETE LESSON */
 
   const completeLesson = async(lesson) => {
   console.log("RUNNING COMPLETE")
@@ -388,7 +381,6 @@ function CoursePlayer() {
 
   }
 
-  /* CREATE */
 
   const createLesson = async() => {
 
@@ -458,7 +450,6 @@ function CoursePlayer() {
 
   }
 
-  /* UPDATE */
 
   const updateLesson = async() => {
 
@@ -502,7 +493,6 @@ function CoursePlayer() {
 
   }
 
-  /* EDIT */
 
   const editLesson = (lesson) => {
 
@@ -528,7 +518,6 @@ function CoursePlayer() {
 
   }
 
-  /* DELETE */
 
   const deleteLesson = async(id) => {
 
@@ -608,7 +597,6 @@ function CoursePlayer() {
 
       <div className="relative">
 
-        {/* HERO */}
 
         <motion.div
 
@@ -661,7 +649,6 @@ function CoursePlayer() {
 
             </div>
 
-            {/* PROGRESS */}
 
             <div className="mt-12">
 
@@ -711,11 +698,9 @@ function CoursePlayer() {
 
         </motion.div>
 
-        {/* MAIN */}
 
         <div className="grid grid-cols-1 xl:grid-cols-[1.4fr_0.6fr] gap-8 mt-8">
 
-          {/* VIDEO */}
 
           <div className="rounded-[40px] bg-white border border-black/5 overflow-hidden">
 
@@ -774,7 +759,6 @@ function CoursePlayer() {
 
           </div>
 
-          {/* LESSONS */}
 
           <div className="rounded-[40px] bg-white border border-black/5 overflow-hidden">
 
@@ -1042,7 +1026,6 @@ function CoursePlayer() {
 
       </div>
 
-      {/* MODAL */}
 
       {
 

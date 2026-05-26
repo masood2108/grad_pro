@@ -363,7 +363,6 @@ function StudentProgress() {
 
 <div className="flex-1 min-w-0 overflow-hidden relative">
 
-{/* BG */}
 
 <div className="absolute top-[-180px] right-[-100px] w-[500px] h-[500px] bg-violet-300/20 blur-[140px] rounded-full pointer-events-none" />
 
@@ -371,7 +370,6 @@ function StudentProgress() {
 
 <div className="h-full overflow-y-auto overflow-x-hidden p-6 relative z-10">
 
-{/* HERO */}
 
 <motion.div
 
@@ -486,7 +484,6 @@ className="hidden lg:flex w-40 h-40 rounded-[40px] bg-black text-white items-cen
 
 </motion.div>
 
-{/* EXPORTS */}
 
 {
 
@@ -546,7 +543,6 @@ Export PDF
 
 }
 
-{/* STATS */}
 
 <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-5 gap-8 mb-10">
 
@@ -587,7 +583,6 @@ color="cyan"
 
 </div>
 
-{/* PROGRESS BAR */}
 
 <div className="rounded-[40px] bg-white border border-black/5 shadow-[0_25px_80px_rgba(0,0,0,0.05)] p-8 mb-10">
 
@@ -657,11 +652,9 @@ Completed {completedAssignments} Tasks
 
 </div>
 
-{/* CHARTS */}
 
 <div className="grid grid-cols-1 2xl:grid-cols-2 gap-8 mb-10">
 
-{/* AREA CHART */}
 
 <div className="rounded-[40px] bg-white border border-black/5 shadow-[0_25px_80px_rgba(0,0,0,0.05)] p-8">
 
@@ -716,7 +709,6 @@ fill="#c4b5fd"
 
 </div>
 
-{/* BAR CHART */}
 
 <div className="rounded-[40px] bg-white border border-black/5 shadow-[0_25px_80px_rgba(0,0,0,0.05)] p-8">
 
@@ -772,7 +764,6 @@ fill="#fb923c"
 
 </div>
 
-{/* TABLE */}
 
 {
 

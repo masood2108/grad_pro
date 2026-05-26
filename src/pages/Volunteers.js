@@ -375,7 +375,6 @@ function Volunteers() {
     <MainLayout>
       <div className="flex-1 min-w-0 relative overflow-hidden">
 
-        {/* BG */}
 
         <div className="absolute top-[-200px] right-[-100px] w-[450px] h-[450px] bg-violet-300/20 blur-[120px] rounded-full" />
 
@@ -384,7 +383,6 @@ function Volunteers() {
         <div className="h-full overflow-y-auto p-6 relative z-10">
 
 
-          {/* HERO */}
 
           <motion.div
 
@@ -439,7 +437,6 @@ function Volunteers() {
 
                 </p>
 
-                {/* STATS */}
 
                 <div className="flex flex-wrap gap-5 mt-10">
 
@@ -471,7 +468,6 @@ function Volunteers() {
 
               </div>
 
-              {/* RIGHT */}
 
               <motion.div
 
@@ -497,7 +493,6 @@ function Volunteers() {
 
           </motion.div>
 
-          {/* SEARCH */}
 
           <div className="flex flex-col xl:flex-row gap-5 items-start xl:items-center justify-between mt-8">
 
@@ -553,7 +548,6 @@ function Volunteers() {
 
           </div>
 
-          {/* VOLUNTEERS */}
 
           <div className="mt-8">
 
@@ -627,7 +621,6 @@ function Volunteers() {
 
                         <div className="relative z-10">
 
-                          {/* HEADER */}
 
                           <div className="flex items-start justify-between gap-5">
 
@@ -689,7 +682,6 @@ function Volunteers() {
 
                             </div>
 
-                            {/* ACTIONS */}
 
                             <div className="flex flex-col gap-3">
 
@@ -725,7 +717,6 @@ function Volunteers() {
 
                           </div>
 
-                          {/* POINTS */}
 
                           <div className="mt-8 rounded-[30px] bg-black text-white p-6">
 
@@ -755,7 +746,6 @@ function Volunteers() {
 
                           </div>
 
-                          {/* EMAIL */}
 
                           <div className="mt-7 flex items-center justify-between">
 
@@ -773,7 +763,6 @@ function Volunteers() {
 
                           </div>
 
-                          {/* FOOTER */}
 
                           <div className="mt-8 pt-6 border-t border-black/5 flex items-center justify-between">
 
@@ -818,7 +807,6 @@ function Volunteers() {
 
       </div>
 
-      {/* MODAL */}
 
       <AnimatePresence>
 
@@ -850,7 +838,6 @@ function Volunteers() {
 
               <div className="relative z-10">
 
-                {/* HEADER */}
 
                 <div className="flex items-start justify-between gap-6">
 
@@ -901,7 +888,6 @@ function Volunteers() {
 
                 </div>
 
-                {/* FORM */}
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
 
@@ -949,7 +935,6 @@ function Volunteers() {
 
                 </div>
 
-                {/* EVENT */}
 
                 <select
 
@@ -988,7 +973,6 @@ function Volunteers() {
 
                 </select>
 
-                {/* STATUS */}
 
                 <div className="grid grid-cols-2 gap-5 mt-6">
 
@@ -1062,7 +1046,6 @@ function Volunteers() {
 
                 </div>
 
-                {/* BUTTONS */}
 
                 <div className="flex gap-5 mt-10">
 

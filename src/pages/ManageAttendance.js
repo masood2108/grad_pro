@@ -348,7 +348,6 @@ function ManageAttendance() {
 
       <div className="flex-1 min-w-0 overflow-hidden relative">
 
-        {/* BACKGROUND */}
 
         <div className="absolute top-[-220px] right-[-120px] w-[500px] h-[500px] bg-violet-300/20 blur-[140px] rounded-full pointer-events-none" />
 
@@ -357,7 +356,6 @@ function ManageAttendance() {
         <div className="h-full overflow-y-auto overflow-x-hidden p-6 relative z-10">
 
 
-          {/* HERO */}
 
           <motion.div
 
@@ -435,7 +433,6 @@ function ManageAttendance() {
 
                 </div>
 
-                {/* RIGHT */}
 
                 <motion.div
 
@@ -463,7 +460,6 @@ function ManageAttendance() {
 
           </motion.div>
 
-          {/* COURSE SELECT */}
 
           <div className="mt-8 rounded-[40px] bg-white border border-black/5 shadow-[0_20px_80px_rgba(0,0,0,0.05)] p-8">
 
@@ -540,7 +536,6 @@ function ManageAttendance() {
 
           </div>
 
-          {/* STUDENTS */}
 
           {
 
@@ -548,7 +543,6 @@ function ManageAttendance() {
 
             <div className="mt-8 rounded-[40px] bg-white border border-black/5 overflow-hidden shadow-[0_20px_80px_rgba(0,0,0,0.05)]">
 
-              {/* HEADER */}
 
               <div className="p-8 border-b border-black/5 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-6">
 
@@ -661,7 +655,6 @@ function ManageAttendance() {
 
                         <div className="flex items-center justify-between gap-5">
 
-                          {/* LEFT */}
 
                           <div className="flex items-center gap-5">
 
@@ -695,7 +688,6 @@ function ManageAttendance() {
 
                           </div>
 
-                          {/* STATUS */}
 
                           {
 
@@ -734,7 +726,6 @@ function ManageAttendance() {
 
                         </div>
 
-                        {/* BUTTONS */}
 
                         <div className="grid grid-cols-2 gap-4 mt-7">
 
@@ -852,7 +843,6 @@ function ManageAttendance() {
 
               }
 
-              {/* SAVE */}
 
               {
 

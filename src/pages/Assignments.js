@@ -426,7 +426,6 @@ function Assignments() {
         <div className="h-full overflow-y-auto overflow-x-hidden p-6 relative z-10">
 
 
-          {/* HERO */}
 
           <motion.div
 
@@ -504,7 +503,6 @@ function Assignments() {
 
           </motion.div>
 
-          {/* TOP ACTION */}
 
           <div className="flex items-center justify-between mt-8 mb-8 flex-wrap gap-5">
 
@@ -550,7 +548,6 @@ function Assignments() {
 
           </div>
 
-          {/* CONTENT */}
 
           {
 
@@ -911,7 +908,6 @@ function Assignments() {
         </div>
 
 
-              {/* MODAL */}
 
         {
 

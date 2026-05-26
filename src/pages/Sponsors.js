@@ -294,7 +294,6 @@ function Sponsors() {
 
       <div className="flex-1 min-w-0 relative overflow-hidden">
 
-        {/* BG */}
 
         <div className="absolute top-[-200px] right-[-100px] w-[450px] h-[450px] bg-emerald-300/20 blur-[120px] rounded-full" />
 
@@ -303,7 +302,6 @@ function Sponsors() {
         <div className="h-full overflow-y-auto p-6 relative z-10">
 
 
-          {/* HERO */}
 
           <motion.div
 
@@ -325,7 +323,6 @@ function Sponsors() {
 
           >
 
-            {/* BG */}
 
             <div className="absolute top-[-20%] right-[-10%] w-[320px] h-[320px] bg-emerald-500/20 blur-[100px] rounded-full" />
 
@@ -333,7 +330,6 @@ function Sponsors() {
 
             <div className="relative z-10 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10">
 
-              {/* LEFT */}
 
               <div>
 
@@ -361,7 +357,6 @@ function Sponsors() {
 
                 </p>
 
-                {/* STATS */}
 
                 <div className="flex flex-wrap gap-5 mt-10">
 
@@ -393,7 +388,7 @@ function Sponsors() {
 
               </div>
 
-              {/* RIGHT */}
+              
 
               <motion.div
 
@@ -419,7 +414,6 @@ function Sponsors() {
 
           </motion.div>
 
-          {/* SEARCH */}
 
           <div className="flex flex-col xl:flex-row gap-5 items-start xl:items-center justify-between mt-8">
 
@@ -475,7 +469,6 @@ function Sponsors() {
 
           </div>
 
-          {/* STATS */}
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
 
@@ -508,7 +501,6 @@ function Sponsors() {
 
           </div>
 
-          {/* SPONSORS */}
 
           <div className="mt-8">
 
@@ -576,7 +568,6 @@ function Sponsors() {
 
                     >
 
-                      {/* TOP */}
 
                       <div className="relative p-8 overflow-hidden">
 
@@ -584,7 +575,6 @@ function Sponsors() {
 
                         <div className="relative z-10">
 
-                          {/* HEADER */}
 
                           <div className="flex items-start justify-between gap-5">
 
@@ -653,7 +643,6 @@ function Sponsors() {
 
                             </div>
 
-                            {/* ACTIONS */}
 
                             <div className="flex flex-col gap-3">
 
@@ -689,7 +678,6 @@ function Sponsors() {
 
                           </div>
 
-                          {/* FUNDING */}
 
                           <div className="mt-8 rounded-[30px] bg-black text-white p-6">
 
@@ -719,7 +707,6 @@ function Sponsors() {
 
                           </div>
 
-                          {/* WEBSITE */}
 
                           <div className="mt-7 flex items-center justify-between">
 
@@ -748,7 +735,6 @@ function Sponsors() {
 
                           </div>
 
-                          {/* FOOTER */}
 
                           <div className="mt-8 pt-6 border-t border-black/5 flex items-center justify-between">
 
@@ -795,7 +781,6 @@ function Sponsors() {
 
       </div>
 
-      {/* MODAL */}
 
       {
 
@@ -821,13 +806,11 @@ function Sponsors() {
 
           >
 
-            {/* BG */}
 
             <div className="absolute top-[-20%] right-[-10%] w-[260px] h-[260px] bg-emerald-200/40 blur-[100px] rounded-full" />
 
             <div className="relative z-10">
 
-              {/* HEADER */}
 
               <div className="flex items-start justify-between gap-6">
 
@@ -886,7 +869,6 @@ function Sponsors() {
 
               </div>
 
-              {/* PREVIEW */}
 
               {
 
@@ -921,7 +903,6 @@ function Sponsors() {
 
               }
 
-              {/* FORM */}
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
 
@@ -967,7 +948,6 @@ function Sponsors() {
 
               </div>
 
-              {/* BUTTONS */}
 
               <div className="flex gap-5 mt-10">
 

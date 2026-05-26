@@ -125,7 +125,6 @@ function QRTicketing() {
 
       )
 
-    /* REGISTERED USERS */
 
     const unsubRegistrations =
 
@@ -199,7 +198,6 @@ function QRTicketing() {
 
     userRole === "organizer"
 
-  /* AUTO GENERATE TICKET */
 
   const generateTicket = async(registration) => {
 
@@ -209,7 +207,6 @@ function QRTicketing() {
         registration.id
       )
 
-      /* CHECK EXISTING */
 
       const alreadyExists =
 
@@ -336,7 +333,6 @@ function QRTicketing() {
         <div className="h-full overflow-y-auto overflow-x-hidden p-6 relative z-10">
 
 
-          {/* HERO */}
 
           <motion.div
 
@@ -429,7 +425,6 @@ function QRTicketing() {
 
           </motion.div>
 
-          {/* SEARCH */}
 
           <div className="mt-8 relative max-w-[420px]">
 
@@ -453,7 +448,6 @@ function QRTicketing() {
 
           </div>
 
-          {/* REGISTERED USERS */}
 
           {
 
@@ -578,7 +572,6 @@ function QRTicketing() {
 
           }
 
-          {/* TICKETS */}
 
           <div className="mt-12">
 

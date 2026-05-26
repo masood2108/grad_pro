@@ -43,7 +43,6 @@ function StudentAttendance() {
   const [loading, setLoading] =
   useState(true)
 
-  /* FORMAT DATE */
 
   const formatDate = (timestamp) => {
 
@@ -76,7 +75,6 @@ function StudentAttendance() {
 
   }
 
-  /* GET USER */
 
   useEffect(() => {
 
@@ -109,7 +107,6 @@ function StudentAttendance() {
 
   }, [])
 
-  /* GET ATTENDANCE */
 
   useEffect(() => {
 
@@ -146,7 +143,6 @@ function StudentAttendance() {
 
   }, [])
 
-  /* FILTER CURRENT STUDENT */
 
   const studentAttendance =
 
@@ -159,7 +155,6 @@ function StudentAttendance() {
 
     )
 
-  /* PRESENT */
 
   const presentCount =
 
@@ -172,7 +167,6 @@ function StudentAttendance() {
 
     ).length
 
-  /* ABSENT */
 
   const absentCount =
 
@@ -185,7 +179,6 @@ function StudentAttendance() {
 
     ).length
 
-  /* PERCENTAGE */
 
   const percentage =
 
@@ -212,7 +205,6 @@ function StudentAttendance() {
     <MainLayout>
       <div className="flex-1 min-w-0 relative overflow-hidden">
 
-        {/* BG */}
 
         <div className="absolute top-[-150px] right-[-120px] w-[420px] h-[420px] bg-purple-200/40 blur-[120px] rounded-full" />
 
@@ -221,7 +213,6 @@ function StudentAttendance() {
         <div className="h-full overflow-y-auto p-6 relative z-10">
 
 
-          {/* HERO */}
 
           <motion.div
 
@@ -243,7 +234,6 @@ function StudentAttendance() {
 
           >
 
-            {/* GLOW */}
 
             <div className="absolute top-[-20%] right-[-10%] w-[320px] h-[320px] bg-purple-500/20 blur-[120px] rounded-full" />
 
@@ -251,7 +241,6 @@ function StudentAttendance() {
 
             <div className="relative z-10 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10">
 
-              {/* LEFT */}
 
               <div>
 
@@ -279,7 +268,6 @@ function StudentAttendance() {
 
                 </p>
 
-                {/* QUICK STATS */}
 
                 <div className="flex flex-wrap gap-5 mt-10">
 
@@ -314,7 +302,6 @@ function StudentAttendance() {
 
               </div>
 
-              {/* RIGHT */}
 
               <motion.div
 
@@ -340,7 +327,6 @@ function StudentAttendance() {
 
           </motion.div>
 
-          {/* STATS */}
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
 
@@ -373,7 +359,6 @@ function StudentAttendance() {
 
           </div>
 
-          {/* TABLE */}
 
           {
 
@@ -447,7 +432,6 @@ function StudentAttendance() {
 
             >
 
-              {/* TOP */}
 
               <div className="p-8 border-b border-black/5 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
 
@@ -496,7 +480,6 @@ function StudentAttendance() {
 
               </div>
 
-              {/* TABLE */}
 
               <div className="overflow-x-auto">
 
@@ -558,7 +541,6 @@ function StudentAttendance() {
 
                         >
 
-                          {/* COURSE */}
 
                           <td className="p-6">
 
@@ -610,7 +592,6 @@ function StudentAttendance() {
 
                           </td>
 
-                          {/* DATE */}
 
                           <td className="p-6">
 
@@ -634,7 +615,6 @@ function StudentAttendance() {
 
                           </td>
 
-                          {/* TIME */}
 
                           <td className="p-6">
 
@@ -647,7 +627,6 @@ function StudentAttendance() {
 
                           </td>
 
-                          {/* STATUS */}
 
                           <td className="p-6">
 

@@ -191,13 +191,11 @@ function AttendanceScanner() {
 <MainLayout>
     <div className="min-h-screen bg-[#f6efe7] overflow-hidden relative flex items-center justify-center p-6">
 
-      {/* BG */}
 
       <div className="absolute top-[-200px] left-[-100px] w-[420px] h-[420px] bg-violet-300/20 blur-[140px] rounded-full" />
 
       <div className="absolute bottom-[-200px] right-[-100px] w-[420px] h-[420px] bg-orange-300/20 blur-[140px] rounded-full" />
 
-      {/* MAIN CARD */}
 
       <motion.div
 
@@ -217,7 +215,6 @@ function AttendanceScanner() {
 
       >
 
-        {/* TOP */}
 
         <div className="px-10 md:px-16 pt-12 pb-10 border-b border-black/5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
 
@@ -271,11 +268,9 @@ function AttendanceScanner() {
 
         </div>
 
-        {/* BODY */}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-8 md:p-12">
 
-          {/* SCANNER */}
 
 <div className="rounded-[40px] bg-[#f8f4ef] border border-black/5 p-6 shadow-[0_15px_60px_rgba(0,0,0,0.04)] min-h-[620px] flex items-center justify-center">
 <div
@@ -284,7 +279,6 @@ function AttendanceScanner() {
 />
           </div>
 
-          {/* STATUS */}
 
           <div className="flex flex-col justify-center">
 

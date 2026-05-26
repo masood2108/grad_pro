@@ -72,7 +72,6 @@ const navigate = useNavigate()
   const [volunteers, setVolunteers] =
   useState([])
 
-  /* EDIT */
 
   const [showEditModal, setShowEditModal] =
   useState(false)
@@ -104,7 +103,6 @@ const navigate = useNavigate()
   const [assignedVolunteers, setAssignedVolunteers] =
   useState([])
 
-  /* USER */
 
   useEffect(() => {
 
@@ -189,7 +187,6 @@ const navigate = useNavigate()
 
   }, [])
 
-  /* EVENTS */
 
   useEffect(() => {
 
@@ -224,7 +221,6 @@ const navigate = useNavigate()
 
   }, [])
 
-  /* VOLUNTEERS */
 
   useEffect(() => {
 
@@ -257,7 +253,6 @@ const navigate = useNavigate()
 
   }, [])
 
-  /* PARTICIPANTS */
 
   useEffect(() => {
 
@@ -318,7 +313,6 @@ const navigate = useNavigate()
 
   }, [userRole])
 
-  /* EDIT EVENT */
 
   const editEvent = (event) => {
 
@@ -352,7 +346,6 @@ const navigate = useNavigate()
 
   }
 
-  /* UPDATE */
 
   const updateEvent = async () => {
 
@@ -400,7 +393,6 @@ const navigate = useNavigate()
 
   }
 
-  /* DELETE */
 
   const deleteEvent = async(id)=>{
 
@@ -437,7 +429,6 @@ const navigate = useNavigate()
 
   }
 
-  /* REGISTER */
 
   const registerEvent = async(event)=>{
 
@@ -521,7 +512,6 @@ const navigate = useNavigate()
 
   }
 
-  /* CANCEL */
 
   const cancelRegistration = async(event)=>{
 
@@ -624,7 +614,6 @@ const navigate = useNavigate()
 
   }
 
-  /* REMOVE STUDENT */
 
   const adminRemoveRegistration = async(
 
@@ -720,7 +709,6 @@ const navigate = useNavigate()
 
   }
 
-  /* NOTIFICATION */
 
   const showNotification = (
     message
@@ -753,7 +741,6 @@ const navigate = useNavigate()
 
   }
 
-  /* FILTER */
 
   const filteredEvents =
   events.filter((event)=>{
@@ -771,7 +758,6 @@ const navigate = useNavigate()
 
       <div className="flex-1 min-w-0 overflow-hidden relative">
 
-        {/* BG */}
 
         <div className="absolute top-[-200px] right-[-100px] w-[500px] h-[500px] bg-violet-300/20 blur-[140px] rounded-full pointer-events-none" />
 
@@ -780,7 +766,6 @@ const navigate = useNavigate()
         <div className="h-full overflow-y-auto overflow-x-hidden p-6 relative z-10">
 
 
-          {/* HERO */}
 
           <motion.div
 
@@ -855,7 +840,7 @@ const navigate = useNavigate()
 
           </motion.div>
 
-          {/* SEARCH */}
+          
 
           <div className="mt-8 relative">
 
@@ -879,7 +864,6 @@ const navigate = useNavigate()
 
           </div>
 
-          {/* EVENTS */}
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mt-10">
 
@@ -933,7 +917,6 @@ const navigate = useNavigate()
 
 >
 
-                  {/* IMAGE */}
 
                   <div className="relative h-[300px] overflow-hidden">
 
@@ -949,7 +932,6 @@ const navigate = useNavigate()
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
-                    {/* STATUS */}
 
                     <div className="absolute top-6 left-6">
 
@@ -988,7 +970,6 @@ const navigate = useNavigate()
 
                     </div>
 
-                    {/* ACTIONS */}
 
                     {
 
@@ -1056,7 +1037,6 @@ const navigate = useNavigate()
 
                   </div>
 
-                  {/* CONTENT */}
 
                   <div className="p-8">
 
@@ -1084,7 +1064,6 @@ const navigate = useNavigate()
 
                     </div>
 
-                    {/* VOLUNTEERS */}
 
                     {
 
@@ -1129,7 +1108,6 @@ const navigate = useNavigate()
 
                     }
 
-                    {/* PARTICIPANTS */}
 
                     {
 
@@ -1244,7 +1222,6 @@ const navigate = useNavigate()
 
                     }
 
-                    {/* BUTTON */}
 
           {
   userRole === "student" &&
@@ -1338,7 +1315,6 @@ const navigate = useNavigate()
 
       </div>
 
-      {/* PREMIUM EDIT MODAL */}
 
       <AnimatePresence>
 
@@ -1387,7 +1363,7 @@ className="w-full max-w-[980px] max-h-[92vh] overflow-y-auto rounded-[42px] bg-w
 
               <div className="relative z-10">
 
-                {/* TOP */}
+                
 
                 <div className="px-10 md:px-14 pt-12 pb-8 border-b border-black/5 flex items-start justify-between gap-6">
 
@@ -1433,11 +1409,9 @@ className="w-full max-w-[980px] max-h-[92vh] overflow-y-auto rounded-[42px] bg-w
 
                 </div>
 
-                {/* BODY */}
 
                 <div className="p-8 md:p-10">
 
-                  {/* PREVIEW */}
 
                   <div className="rounded-[40px] overflow-hidden border border-black/5 shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
 
@@ -1475,7 +1449,6 @@ className="w-full max-w-[980px] max-h-[92vh] overflow-y-auto rounded-[42px] bg-w
 
                   </div>
 
-                  {/* FORM */}
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
 
@@ -1512,7 +1485,6 @@ className="w-full max-w-[980px] max-h-[92vh] overflow-y-auto rounded-[42px] bg-w
 
                   </div>
 
-                  {/* DESCRIPTION */}
 
                   <div className="mt-8">
 
@@ -1538,7 +1510,6 @@ className="w-full max-w-[980px] max-h-[92vh] overflow-y-auto rounded-[42px] bg-w
 
                   </div>
 
-                  {/* STATUS */}
 
                   <div className="mt-8">
 
@@ -1576,7 +1547,6 @@ className="w-full max-w-[980px] max-h-[92vh] overflow-y-auto rounded-[42px] bg-w
 
                   </div>
 
-                  {/* VOLUNTEERS */}
 
                   <div className="mt-12">
 
@@ -1775,7 +1745,6 @@ className="w-full max-w-[980px] max-h-[92vh] overflow-y-auto rounded-[42px] bg-w
 
                   </div>
 
-                  {/* REGISTERED STUDENTS */}
 
                   <div className="mt-14">
 
@@ -1914,7 +1883,6 @@ className="w-full max-w-[980px] max-h-[92vh] overflow-y-auto rounded-[42px] bg-w
 
                   </div>
 
-                  {/* SAVE */}
 
                   <button
 

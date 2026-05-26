@@ -706,17 +706,14 @@ else if(userRole === "student"){
 className="w-full lg:w-[290px] lg:min-w-[290px] lg:max-w-[290px] h-screen bg-[#f8f4ef] border-r border-black/5 flex flex-col justify-between px-3 lg:px-5 py-6 relative overflow-y-auto overflow-x-hidden flex-shrink-0"
     >
 
-      {/* BG */}
 
       <div className="absolute top-[-10%] left-[-20%] w-[240px] h-[240px] bg-violet-300/20 blur-[90px] rounded-full pointer-events-none" />
 
       <div className="absolute bottom-[-10%] right-[-20%] w-[240px] h-[240px] bg-orange-300/20 blur-[90px] rounded-full pointer-events-none" />
 
-      {/* TOP */}
 
       <div className="relative z-10">
 
-        {/* LOGO */}
 
         <button
 
@@ -761,7 +758,6 @@ className="w-full lg:w-[290px] lg:min-w-[290px] lg:max-w-[290px] h-screen bg-[#f
 
         </button>
 
-        {/* NAV */}
 
 <div className="mt-10 grid grid-cols-2 gap-4 lg:flex lg:flex-col">  {
 
@@ -931,7 +927,6 @@ text-[10px] lg:text-[11px]
 
       </div>
 
-      {/* PROFILE */}
 
       <div className="relative z-10 mt-6">
 

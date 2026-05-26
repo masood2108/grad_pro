@@ -180,8 +180,6 @@ function EventDetails() {
 
       <div className="flex-1 min-w-0 overflow-hidden relative">
 
-        {/* BG */}
-
         <div className="absolute top-[-200px] right-[-100px] w-[500px] h-[500px] bg-violet-300/20 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="absolute bottom-[-200px] left-[-100px] w-[500px] h-[500px] bg-orange-300/20 blur-[140px] rounded-full pointer-events-none" />
@@ -189,7 +187,6 @@ function EventDetails() {
         <div className="h-full overflow-y-auto overflow-x-hidden p-6 relative z-10">
 
 
-          {/* HERO */}
 
           <motion.div
 
@@ -211,7 +208,6 @@ function EventDetails() {
 
           >
 
-            {/* IMAGE */}
 
             <div className="h-[520px] relative overflow-hidden">
 
@@ -271,7 +267,6 @@ function EventDetails() {
 
             </div>
 
-            {/* CONTENT */}
 
             <div className="relative px-10 md:px-14 pb-14 -mt-28 z-10">
 
@@ -305,7 +300,6 @@ function EventDetails() {
 
                     </p>
 
-                    {/* INFO */}
 
                     <div className="flex flex-wrap gap-5 mt-10">
 
@@ -337,7 +331,6 @@ function EventDetails() {
 
                   </div>
 
-                  {/* QUICK CARDS */}
 
                   <div className="grid grid-cols-2 gap-5 min-w-[320px]">
 
@@ -391,15 +384,12 @@ function EventDetails() {
 
           </motion.div>
 
-          {/* ANALYTICS */}
 
           <div className="grid grid-cols-1 xl:grid-cols-[1.3fr_0.7fr] gap-8 mt-8">
 
-            {/* LEFT */}
 
             <div className="space-y-8">
 
-              {/* PERFORMANCE */}
 
               <motion.div
 
@@ -489,7 +479,6 @@ function EventDetails() {
 
               </motion.div>
 
-              {/* FEATURES */}
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -537,11 +526,8 @@ function EventDetails() {
 
             </div>
 
-            {/* RIGHT */}
-
             <div className="space-y-8">
 
-              {/* LIVE */}
 
               <motion.div
 
@@ -615,7 +601,6 @@ function EventDetails() {
 
               </motion.div>
 
-              {/* DETAILS */}
 
               <div className="rounded-[40px] bg-white border border-black/5 shadow-[0_20px_80px_rgba(0,0,0,0.05)] p-8">
 
@@ -694,7 +679,6 @@ function EventDetails() {
 
           </div>
 
-          {/* VOLUNTEERS */}
 
           <motion.div
 

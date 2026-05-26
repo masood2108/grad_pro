@@ -153,7 +153,6 @@ function Notifications(){
 
 <div className="flex-1 min-w-0 overflow-hidden relative">
 
-{/* BG */}
 
 <div className="absolute top-[-180px] right-[-100px] w-[500px] h-[500px] bg-violet-300/20 blur-[140px] rounded-full pointer-events-none" />
 
@@ -161,7 +160,6 @@ function Notifications(){
 
 <div className="h-full overflow-y-auto overflow-x-hidden p-6 relative z-10">
 
-{/* HERO */}
 
 <motion.div
 
@@ -282,7 +280,6 @@ className="hidden lg:flex w-40 h-40 rounded-[40px] bg-black text-white items-cen
 
 </motion.div>
 
-{/* NOTIFICATIONS */}
 
 <div className="mt-10 space-y-6">
 

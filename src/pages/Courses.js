@@ -90,9 +90,7 @@ function Courses() {
   const [uploading, setUploading] =
   useState(false)
 
-  /* ======================================================= */
-  /* BATCH STATES */
-  /* ======================================================= */
+ 
 
   const [showBatchModal, setShowBatchModal] =
   useState(false)
@@ -103,9 +101,7 @@ function Courses() {
   const [courseBatches, setCourseBatches] =
   useState([])
 
-  /* ======================================================= */
-  /* USER ROLE */
-  /* ======================================================= */
+ 
 
   useEffect(() => {
 
@@ -140,9 +136,7 @@ function Courses() {
 
   }, [])
 
-  /* ======================================================= */
-  /* COURSES */
-  /* ======================================================= */
+  
 
   useEffect(() => {
 
@@ -177,9 +171,7 @@ function Courses() {
 
   }, [])
 
-  /* ======================================================= */
-  /* ENROLLMENTS */
-  /* ======================================================= */
+ 
 
   useEffect(() => {
 
@@ -234,10 +226,6 @@ function Courses() {
 
   }, [])
 
-  /* ======================================================= */
-  /* RESET */
-  /* ======================================================= */
-
   const resetForm = () => {
 
     setTitle("")
@@ -251,9 +239,7 @@ function Courses() {
 
   }
 
-  /* ======================================================= */
-  /* IMAGE */
-  /* ======================================================= */
+ 
 
   const uploadImage = async(file) => {
 
@@ -303,10 +289,7 @@ function Courses() {
 
   }
 
-  /* ======================================================= */
-  /* OPEN BATCH MODAL */
-  /* ======================================================= */
-
+ 
   const openBatchModal = async(course) => {
 
     try{
@@ -355,9 +338,7 @@ function Courses() {
 
   }
 
-  /* ======================================================= */
-  /* ENROLL */
-  /* ======================================================= */
+ 
 
  const enrollCourse = async(
   course,
@@ -404,9 +385,7 @@ function Courses() {
     const userData =
     userSnap.data()
 
-    /* ======================================================= */
-    /* CREATE ENROLLMENT */
-    /* ======================================================= */
+    
 
     await addDoc(
 
@@ -454,9 +433,7 @@ function Courses() {
 
     )
 
-    /* ======================================================= */
-    /* AUTO CREATE FEE */
-    /* ======================================================= */
+    
 
     await addDoc(
 
@@ -495,10 +472,7 @@ function Courses() {
 
     )
 
-    /* ======================================================= */
-    /* UPDATE STUDENT COUNT */
-    /* ======================================================= */
-
+   
     await updateDoc(
 
       doc(
@@ -516,9 +490,6 @@ function Courses() {
 
     )
 
-    /* ======================================================= */
-    /* UI UPDATE */
-    /* ======================================================= */
 
     setEnrolledCourses([
 
@@ -543,9 +514,7 @@ function Courses() {
 
 }
 
-  /* ======================================================= */
-  /* CREATE */
-  /* ======================================================= */
+
 const createCourse = async () => {
 
   if(!title || !instructor){
@@ -558,7 +527,6 @@ const createCourse = async () => {
 
   try{
 
-    /* CREATE COURSE */
 
     const courseRef = await addDoc(
 
@@ -586,7 +554,6 @@ const createCourse = async () => {
 
     )
 
-    /* AUTO CREATE BATCHES */
 
     await addDoc(
 
@@ -668,9 +635,7 @@ const createCourse = async () => {
 
 }
 
-  /* ======================================================= */
-  /* UPDATE */
-  /* ======================================================= */
+ 
 
   const updateCourse = async () => {
 
@@ -712,9 +677,7 @@ const createCourse = async () => {
 
   }
 
-  /* ======================================================= */
-  /* EDIT */
-  /* ======================================================= */
+ 
 
   const editCourse = (course) => {
 
@@ -748,10 +711,7 @@ const createCourse = async () => {
 
   }
 
-  /* ======================================================= */
-  /* DELETE */
-  /* ======================================================= */
-
+  
   const deleteCourse = async(id) => {
 
     const confirmDelete =
@@ -783,10 +743,7 @@ const createCourse = async () => {
 
   }
 
-  /* ======================================================= */
-  /* FILTER */
-  /* ======================================================= */
-
+ 
   const filteredCourses =
   courses.filter((course)=>
 
@@ -804,7 +761,6 @@ const createCourse = async () => {
 
       <div className="flex-1 overflow-y-auto p-8">
 
-        {/* HEADER */}
 
         <div className="flex items-center justify-between mb-5">
 
@@ -866,7 +822,6 @@ const createCourse = async () => {
 
         </div>
 
-        {/* SEARCH */}
 
         <div className="relative mb-10">
 
@@ -888,7 +843,6 @@ const createCourse = async () => {
 
         </div>
 
-        {/* COURSES */}
 
         {
 
@@ -980,7 +934,6 @@ const createCourse = async () => {
 
                   </div>
 
-                  {/* CONTENT */}
 
                   <div className="p-7">
 
@@ -1064,7 +1017,6 @@ const createCourse = async () => {
 
                     </p>
 
-                    {/* STATS */}
 
                     <div className="grid grid-cols-3 gap-4 mt-8">
 
@@ -1136,7 +1088,6 @@ const createCourse = async () => {
 
                     </div>
 
-                    {/* ACTIONS */}
 
                     {
 
@@ -1246,9 +1197,7 @@ const createCourse = async () => {
 
       </div>
 
-      {/* ======================================================= */}
-      {/* BATCH MODAL */}
-      {/* ======================================================= */}
+     
 
       {
 
@@ -1274,7 +1223,6 @@ const createCourse = async () => {
 
           >
 
-            {/* TOP */}
 
             <div className="px-8 pt-8 pb-6 border-b border-black/5 flex items-start justify-between">
 
@@ -1316,7 +1264,6 @@ const createCourse = async () => {
 
             </div>
 
-            {/* BATCHES */}
 
             <div className="p-8">
 
@@ -1434,9 +1381,7 @@ const createCourse = async () => {
         </div>
 
       }
-{/* ======================================================= */}
-{/* COURSE MODAL */}
-{/* ======================================================= */}
+
 
 {
 
@@ -1466,7 +1411,6 @@ const createCourse = async () => {
 
     >
 
-      {/* TOP */}
 
       <div className="px-8 pt-8 pb-6 border-b border-black/5 flex items-start justify-between">
 
@@ -1514,7 +1458,6 @@ const createCourse = async () => {
 
       </div>
 
-      {/* FORM */}
 
       <div className="p-8 space-y-5">
 
@@ -1596,7 +1539,6 @@ const createCourse = async () => {
 
         />
 
-        {/* IMAGE */}
 
         <label className="relative w-full h-[180px] rounded-[28px] border-2 border-dashed border-black/10 bg-[#faf7f3] overflow-hidden cursor-pointer flex items-center justify-center group">
 

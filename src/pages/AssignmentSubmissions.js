@@ -166,7 +166,6 @@ function AssignmentSubmissions() {
 
           <MainLayout>
 
-        {/* BACKGROUND */}
 
         <div className="absolute top-[-180px] right-[-120px] w-[500px] h-[500px] bg-violet-300/20 blur-[140px] rounded-full pointer-events-none" />
 
@@ -175,7 +174,6 @@ function AssignmentSubmissions() {
         <div className="h-full overflow-y-auto overflow-x-hidden p-6 relative z-10">
 
 
-          {/* HERO */}
 
           <motion.div
 
@@ -254,7 +252,6 @@ function AssignmentSubmissions() {
 
           </motion.div>
 
-          {/* STATS */}
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 mb-10">
 
@@ -281,7 +278,6 @@ function AssignmentSubmissions() {
 
           </div>
 
-          {/* CONTENT */}
 
           {
 
@@ -349,7 +345,6 @@ function AssignmentSubmissions() {
 
                   >
 
-                    {/* TOP */}
 
                     <div className="relative p-7 overflow-hidden">
 
@@ -407,7 +402,6 @@ function AssignmentSubmissions() {
 
                     </div>
 
-                    {/* MARKS */}
 
                     <div className="px-7">
 
@@ -445,7 +439,6 @@ function AssignmentSubmissions() {
 
                     </div>
 
-                    {/* DOWNLOAD */}
 
                     <div className="px-7 mt-6">
 
@@ -477,7 +470,6 @@ function AssignmentSubmissions() {
 
                     </div>
 
-                    {/* QUICK MARKS */}
 
                     <div className="grid grid-cols-4 gap-3 px-7 mt-6">
 
@@ -531,7 +523,6 @@ function AssignmentSubmissions() {
 
                     </div>
 
-                    {/* CUSTOM FEEDBACK */}
 
                     <div className="p-7">
 

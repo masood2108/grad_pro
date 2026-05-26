@@ -130,11 +130,9 @@ function Analytics() {
 
  <MainLayout>
 
-        {/* BACKGROUND */}
 
         <div className="h-full overflow-y-auto overflow-x-hidden p-6 relative z-10">
 
-          {/* HERO */}
 
           <motion.div
 
@@ -256,7 +254,6 @@ function Analytics() {
 
           </motion.div>
 
-          {/* STATS */}
 
           <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-8 mt-8">
 
@@ -294,11 +291,9 @@ function Analytics() {
 
           </div>
 
-          {/* ANALYTICS SECTION */}
 
           <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-8 mt-8">
 
-            {/* CHART */}
 
             <motion.div
 
@@ -338,7 +333,6 @@ function Analytics() {
 
               </div>
 
-              {/* GRAPH */}
 
               <div className="h-[340px] flex items-end gap-5 relative z-10">
 
@@ -371,7 +365,6 @@ function Analytics() {
 
             </motion.div>
 
-            {/* ACTIVITY */}
 
             <motion.div
 

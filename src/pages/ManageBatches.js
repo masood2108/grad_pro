@@ -104,7 +104,6 @@ function ManageBatches() {
 
   }, [])
 
-  /* FETCH BATCHES */
 
   useEffect(() => {
 
@@ -139,7 +138,6 @@ function ManageBatches() {
 
   }, [])
 
-  /* RESET */
 
   const resetForm = () => {
 
@@ -153,7 +151,6 @@ function ManageBatches() {
 
   }
 
-  /* CREATE */
 
   const createBatch = async() => {
 
@@ -211,7 +208,6 @@ function ManageBatches() {
 
   }
 
-  /* UPDATE */
 
   const updateBatch = async() => {
 
@@ -252,7 +248,6 @@ function ManageBatches() {
 
   }
 
-  /* EDIT */
 
   const editBatch = (batch) => {
 
@@ -286,7 +281,6 @@ function ManageBatches() {
 
   }
 
-  /* DELETE */
 
   const deleteBatch = async(id) => {
 
@@ -325,7 +319,6 @@ function ManageBatches() {
 
       <div className="flex-1 overflow-y-auto p-8 relative">
 
-        {/* BG */}
 
         <div className="absolute top-[-180px] right-[-120px] w-[500px] h-[500px] bg-violet-300/20 blur-[140px] rounded-full pointer-events-none" />
 
@@ -333,7 +326,6 @@ function ManageBatches() {
 
         <div className="relative z-10">
 
-          {/* HERO */}
 
           <motion.div
 
@@ -450,7 +442,6 @@ function ManageBatches() {
 
           </motion.div>
 
-          {/* ADD BUTTON */}
 
           <div className="flex justify-end mt-8">
 
@@ -485,7 +476,6 @@ function ManageBatches() {
 
           </div>
 
-          {/* BATCHES */}
 
           {
 
@@ -614,7 +604,6 @@ function ManageBatches() {
 
                       </div>
 
-                      {/* ACTIONS */}
 
                       <div className="grid grid-cols-2 gap-4 mt-8">
 
@@ -668,7 +657,6 @@ function ManageBatches() {
 
       </div>
 
-      {/* MODAL */}
 
       {
 
@@ -694,7 +682,6 @@ function ManageBatches() {
 
           >
 
-            {/* TOP */}
 
             <div className="px-8 pt-8 pb-6 border-b border-black/5 flex items-start justify-between">
 
@@ -742,7 +729,6 @@ function ManageBatches() {
 
             </div>
 
-            {/* FORM */}
 
             <div className="p-8 space-y-5">
 

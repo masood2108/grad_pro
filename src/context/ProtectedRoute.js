@@ -218,7 +218,6 @@ function ProtectedRoute({
 
   ])
 
-  /* LOADING SCREEN */
 
   if(loading){
 
@@ -226,7 +225,6 @@ function ProtectedRoute({
 
       <div className="w-screen h-screen bg-[#f5efe7] overflow-hidden flex items-center justify-center relative">
 
-        {/* BLUR */}
 
         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-violet-300/20 blur-[140px] rounded-full" />
 
@@ -260,7 +258,6 @@ function ProtectedRoute({
 
   }
 
-  /* BLOCK ACCESS */
 
   if(!authorized){
 
@@ -278,7 +275,6 @@ function ProtectedRoute({
 
   }
 
-  /* SUCCESS */
 
   return children
 

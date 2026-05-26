@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+ /*eslint-disable no-unused-vars */
 import { useEffect, useState } from "react"
 
 import {
@@ -103,7 +103,6 @@ function Dashboard() {
 
             setRole(data.role)
 
-            /* USERS */
 
             onSnapshot(
 
@@ -122,7 +121,6 @@ function Dashboard() {
 
             )
 
-            /* COURSES */
 
             onSnapshot(
 
@@ -141,7 +139,6 @@ function Dashboard() {
 
             )
 
-            /* ASSIGNMENTS */
 
             onSnapshot(
 
@@ -160,7 +157,6 @@ function Dashboard() {
 
             )
 
-            /* REVENUE ONLY FOR ADMIN */
 
             if(data.role === "admin"){
 
@@ -192,7 +188,6 @@ function Dashboard() {
 
             }
 
-            /* ACTIVITY */
 
             onSnapshot(
 
@@ -244,7 +239,6 @@ function Dashboard() {
 
   }, [navigate])
 
-  /* ROLE BASED ICON */
 
   const getRoleIcon = () => {
 
@@ -270,7 +264,6 @@ function Dashboard() {
 
   }
 
-  /* ROLE DESCRIPTION */
 
   const getRoleDescription = () => {
 
@@ -296,7 +289,6 @@ function Dashboard() {
 
   }
 
-  /* ROLE BASED CARDS */
 
   let dashboardCards = [
 
@@ -385,7 +377,6 @@ function Dashboard() {
 
       <div className="flex-1 min-w-0 h-screen overflow-hidden relative">
 
-        {/* BG */}
 
         <div className="absolute top-[-15%] right-[-10%] w-[450px] h-[450px] bg-violet-300/20 blur-[140px] rounded-full pointer-events-none" />
 
@@ -394,7 +385,6 @@ function Dashboard() {
         <div className="h-full overflow-y-auto overflow-x-hidden p-6 relative z-10">
 
 
-          {/* HERO */}
 
           <motion.div
 
@@ -479,7 +469,6 @@ function Dashboard() {
 
           </motion.div>
 
-          {/* STATS */}
 
           <div className={`
 
@@ -525,7 +514,6 @@ function Dashboard() {
 
           </div>
 
-          {/* LOWER */}
 
           <div className={`
 
@@ -548,7 +536,6 @@ function Dashboard() {
 
           `}>
 
-            {/* PERFORMANCE */}
 
             {
 
@@ -591,7 +578,6 @@ function Dashboard() {
 
                 </div>
 
-                {/* REAL GRAPH */}
 
                 <div className="h-[340px] flex items-end gap-5 overflow-hidden">
 
@@ -712,7 +698,6 @@ function Dashboard() {
 
             }
 
-            {/* ACTIVITY */}
 
             {
 

@@ -391,7 +391,6 @@ function Certificates() {
 
         <div className="relative z-10">
 
-          {/* HERO */}
 
           <motion.div
 
@@ -466,7 +465,6 @@ function Certificates() {
 
           </motion.div>
 
-          {/* SEARCH */}
 
           <div className="flex flex-col lg:flex-row gap-5 lg:items-center lg:justify-between mt-8">
 
@@ -524,7 +522,6 @@ function Certificates() {
 
           </div>
 
-          {/* CARDS */}
 
           <div className="mt-10">
 
@@ -746,7 +743,6 @@ function Certificates() {
 
     >
 
-      {/* TOP */}
 
       <div className="px-8 pt-8 pb-6 border-b border-black/5 flex items-start justify-between">
 
@@ -794,7 +790,6 @@ function Certificates() {
 
       </div>
 
-      {/* FORM */}
 
       <div className="p-8 space-y-5">
 

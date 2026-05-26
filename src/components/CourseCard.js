@@ -110,7 +110,6 @@ function CourseCard({
 
     `}>
 
-      {/* EVENT IMAGE */}
 
       <div className="h-[230px] w-full overflow-hidden relative">
 
@@ -126,7 +125,6 @@ function CourseCard({
 
         />
 
-        {/* CATEGORY */}
 
         <span className={`
 
@@ -143,7 +141,6 @@ function CourseCard({
 
         </span>
 
-        {/* STATUS */}
 
         <span className={`
 
@@ -162,15 +159,12 @@ function CourseCard({
 
       </div>
 
-      {/* BODY */}
 
       <div className="p-6 flex-1 flex flex-col justify-between">
 
-        {/* TOP */}
 
         <div>
 
-          {/* META */}
 
           <div className="flex items-center gap-2 text-zinc-500 text-[10px] font-semibold">
 
@@ -190,7 +184,6 @@ function CourseCard({
 
           </div>
 
-          {/* TITLE */}
 
           <h2 className="text-2xl font-extrabold text-white mt-2 leading-snug group-hover:text-purple-300 transition duration-200">
 
@@ -198,7 +191,6 @@ function CourseCard({
 
           </h2>
 
-          {/* DESCRIPTION */}
 
           <p className="text-zinc-400 text-sm mt-4 leading-relaxed font-medium">
 
@@ -208,13 +200,11 @@ function CourseCard({
 
         </div>
 
-        {/* EVENT INFO */}
 
         <div className="mt-6 pt-5 border-t border-white/[0.04]">
 
           <div className="grid grid-cols-2 gap-4">
 
-            {/* REGISTRATIONS */}
 
             <div className="bg-zinc-950/60 border border-white/[0.03] rounded-2xl p-4">
 
@@ -234,7 +224,6 @@ function CourseCard({
 
             </div>
 
-            {/* VENUE */}
 
             <div className="bg-zinc-950/60 border border-white/[0.03] rounded-2xl p-4">
 
@@ -258,11 +247,9 @@ function CourseCard({
 
         </div>
 
-        {/* FOOTER */}
 
         <div className="mt-6 pt-5 border-t border-white/[0.04] flex items-center justify-between gap-4">
 
-          {/* ORGANIZER */}
 
           <div className="flex items-center gap-3">
 
@@ -289,8 +276,6 @@ function CourseCard({
             </div>
 
           </div>
-
-          {/* ACTION */}
 
           <button className={`
 

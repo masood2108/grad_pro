@@ -358,7 +358,6 @@ function Attendance() {
 
 <MainLayout>
 <div className="flex-1 min-w-0 overflow-hidden relative">
-        {/* BG */}
 
         <div className="absolute top-[-200px] right-[-120px] w-[500px] h-[500px] bg-violet-300/20 blur-[140px] rounded-full pointer-events-none" />
 
@@ -367,7 +366,6 @@ function Attendance() {
         <div className="h-full overflow-y-auto overflow-x-hidden p-6 relative z-10">
 
 
-          {/* HERO */}
 
           <motion.div
 
@@ -445,7 +443,6 @@ function Attendance() {
 
           </motion.div>
 
-          {/* STATS */}
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 mb-8">
 
@@ -472,11 +469,9 @@ function Attendance() {
 
           </div>
 
-          {/* TOP BAR */}
 
           <div className="flex flex-col lg:flex-row gap-5 lg:items-center lg:justify-between mb-8">
 
-            {/* SEARCH */}
 
             <div className="relative flex-1">
 
@@ -500,7 +495,6 @@ function Attendance() {
 
             </div>
 
-            {/* BUTTON */}
 
             {
 
@@ -543,7 +537,6 @@ function Attendance() {
 
           </div>
 
-          {/* TABLE */}
 
           {
 
@@ -565,7 +558,6 @@ function Attendance() {
 
             <div className="rounded-[40px] bg-white border border-black/5 shadow-[0_25px_80px_rgba(0,0,0,0.05)] overflow-hidden">
 
-              {/* HEADER */}
 
               <div className="grid grid-cols-5 gap-5 px-8 py-6 border-b border-black/5 bg-[#faf7f3]">
 
@@ -601,7 +593,6 @@ function Attendance() {
 
               </div>
 
-              {/* BODY */}
 
               <div>
 
@@ -635,7 +626,6 @@ function Attendance() {
 
                     >
 
-                      {/* STUDENT */}
 
                       <div className="flex items-center gap-4">
 
@@ -663,7 +653,6 @@ function Attendance() {
 
                       </div>
 
-                      {/* COURSE */}
 
                       <div>
 
@@ -681,7 +670,6 @@ function Attendance() {
 
                       </div>
 
-                      {/* STATUS */}
 
                       <div>
 
@@ -709,7 +697,6 @@ function Attendance() {
 
                       </div>
 
-                      {/* DATE */}
 
                       <div className="flex items-center gap-3">
 
@@ -737,7 +724,6 @@ function Attendance() {
 
                       </div>
 
-                      {/* ACTIONS */}
 
                       {
 
@@ -812,7 +798,6 @@ function Attendance() {
 
 
 
-      {/* MODAL */}
 
       {
 
@@ -838,7 +823,6 @@ function Attendance() {
 
           >
 
-            {/* TOP */}
 
             <div className="px-8 pt-8 pb-6 border-b border-black/5 flex items-start justify-between">
 
@@ -886,7 +870,6 @@ function Attendance() {
 
             </div>
 
-            {/* FORM */}
 
             <div className="p-8 space-y-5">
 

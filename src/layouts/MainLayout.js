@@ -40,7 +40,6 @@ function MainLayout({ children }) {
 
     <div className="w-screen min-h-screen bg-[#f6efe7] flex text-black relative overflow-x-hidden">
 
-      {/* MOBILE TOPBAR */}
 
       <div className="lg:hidden fixed top-0 left-0 right-0 h-[78px] bg-white/80 backdrop-blur-2xl border-b border-black/5 flex items-center justify-between px-5 z-[99999]">
 
@@ -100,7 +99,6 @@ function MainLayout({ children }) {
 
       </div>
 
-      {/* OVERLAY */}
 
       <div
 
@@ -131,7 +129,6 @@ function MainLayout({ children }) {
 
       />
 
-      {/* MOBILE SIDEBAR FROM BOTTOM */}
 
       <div
 
@@ -162,7 +159,6 @@ function MainLayout({ children }) {
 
         <div className="bg-[#f6efe7] rounded-t-[35px] shadow-[0_-20px_80px_rgba(0,0,0,0.18)] border-t border-black/5 max-h-[85vh] overflow-y-auto overflow-x-hidden">
 
-          {/* HANDLE */}
 
           <div className="flex justify-center pt-4 pb-2">
 
@@ -170,7 +166,6 @@ function MainLayout({ children }) {
 
           </div>
 
-          {/* SIDEBAR */}
 
           <div className="px-3 pb-6">
 
@@ -186,7 +181,6 @@ function MainLayout({ children }) {
 
       </div>
 
-      {/* DESKTOP SIDEBAR */}
 
       <div className="hidden lg:block">
 
@@ -198,7 +192,6 @@ function MainLayout({ children }) {
 
       </div>
 
-      {/* PAGE */}
 
       <div className="flex-1 min-w-0 relative overflow-x-hidden">
 

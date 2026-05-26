@@ -26,13 +26,11 @@ function CertificatePreview() {
 
     <div className="min-h-screen bg-[#f6efe7] flex items-center justify-center p-6 overflow-hidden relative">
 
-      {/* BG */}
 
       <div className="absolute top-[-200px] left-[-120px] w-[500px] h-[500px] bg-violet-300/20 blur-[140px] rounded-full" />
 
       <div className="absolute bottom-[-200px] right-[-120px] w-[500px] h-[500px] bg-orange-300/20 blur-[140px] rounded-full" />
 
-      {/* CERTIFICATE */}
 
       <motion.div
 
@@ -56,15 +54,12 @@ function CertificatePreview() {
 
       >
 
-        {/* TOP GRADIENT */}
 
         <div className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-orange-400 via-violet-500 to-cyan-400" />
 
-        {/* INNER */}
 
         <div className="p-10 md:p-20 relative z-10">
 
-          {/* HEADER */}
 
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
 
@@ -96,7 +91,6 @@ function CertificatePreview() {
 
           </div>
 
-          {/* CONTENT */}
 
           <div className="mt-20">
 
@@ -126,11 +120,9 @@ function CertificatePreview() {
 
           </div>
 
-          {/* BOTTOM */}
 
           <div className="mt-24 grid grid-cols-1 lg:grid-cols-3 gap-10">
 
-            {/* DATE */}
 
             <div className="rounded-[35px] bg-[#faf7f3] border border-black/5 p-8">
 
@@ -146,7 +138,6 @@ function CertificatePreview() {
 
             </div>
 
-            {/* CERTIFICATE ID */}
 
             <div className="rounded-[35px] bg-[#faf7f3] border border-black/5 p-8">
 
@@ -162,7 +153,6 @@ function CertificatePreview() {
 
             </div>
 
-            {/* QR */}
 
             <div className="rounded-[35px] bg-black text-white p-8 flex flex-col items-center justify-center">
 
@@ -177,7 +167,6 @@ function CertificatePreview() {
 
           </div>
 
-          {/* SIGNATURES */}
 
           <div className="mt-24 grid md:grid-cols-2 gap-16">
 
