@@ -360,7 +360,7 @@ function Navbar() {
 
     }
 
-    return "LMS Portal"
+    return "EMS Portal"
 
   }
 

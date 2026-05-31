@@ -7,19 +7,10 @@ import {
   FaCertificate,
   FaCog,
   FaSignOutAlt,
-  FaWallet,
-FaVideo,
   FaChevronRight,
   FaBolt,
-  FaBook,
-  FaChartLine,
-  FaChalkboardTeacher,
   FaBell,
-  FaUserGraduate,
-  FaUserFriends,
-  FaTasks,
-  FaClipboardCheck,
-  FaUserCheck,
+ 
   FaLayerGroup,
   FaQrcode,
   FaUserTie
@@ -73,8 +64,7 @@ function Sidebar() {
   const [sponsorsCount, setSponsorsCount] =
   useState(0)
 
-  const [coursesCount, setCoursesCount] =
-  useState(0)
+
 
   const [userName, setUserName] =
   useState("User")
@@ -98,19 +88,7 @@ function Sidebar() {
 
     )
 
-    const unsubCourses =
 
-    onSnapshot(
-
-      collection(db, "courses"),
-
-      (snapshot) => {
-
-        setCoursesCount(snapshot.size)
-
-      }
-
-    )
 
     const unsubVolunteers =
 
@@ -207,7 +185,6 @@ function Sidebar() {
       unsubEvents()
       unsubVolunteers()
       unsubSponsors()
-      unsubCourses()
       unsubscribeAuth()
 
     }
@@ -224,360 +201,82 @@ function Sidebar() {
 
     navItems = [
 
-      {
-        title:"Dashboard",
-        icon:<FaHome />,
-        path:"/dashboard",
-        sub:"Admin control"
-      },
-
-      {
-        title:"Courses",
-        icon:<FaBook />,
-        path:"/courses",
-        sub:`${coursesCount} courses`
-      },
-
-      {
-        title:"Assignments",
-        icon:<FaTasks />,
-        path:"/assignments",
-        sub:"Manage tasks"
-      },
-
-      {
-        title:"Progress",
-        icon:<FaChartLine />,
-        path:"/progress",
-        sub:"Realtime analytics"
-      },
-
-      {
-        title:"Attendance",
-        icon:<FaClipboardCheck />,
-        path:"/attendance",
-        sub:"Track records"
-      },
-
-      {
-        title:"Manage Attendance",
-        icon:<FaUserCheck />,
-        path:"/manage-attendance",
-        sub:"Faculty controls"
-      },{
-  title:"Fee Management",
-  icon:<FaWallet />,
-  path:"/fees",
-  sub:"Student payments"
+{
+title:"Dashboard",
+icon:<FaHome />,
+path:"/dashboard",
+sub:"Admin control"
 },
 
 {
-  title:"Online Classes",
-  icon:<FaVideo />,
-  path:"/online-classes",
-  sub:"Live class sessions"
-},
-
-      {
-        title:"Certificates",
-        icon:<FaCertificate />,
-        path:"/certificates",
-        sub:"Issue certificates"
-      },
-
-      {
-        title:"Events",
-        icon:<FaCalendarAlt />,
-        path:"/events",
-        sub:`${eventsCount} events`
-      },
-
-      {
-        title:"Volunteers",
-        icon:<FaUserTie />,
-        path:"/volunteers",
-        sub:`${volunteersCount} volunteers`
-      },
-
-      {
-        title:"Sponsors",
-        icon:<FaHandshake />,
-        path:"/sponsors",
-        sub:`${sponsorsCount} sponsors`
-      },
-
-      {
-        title:"Analytics",
-        icon:<FaChartPie />,
-        path:"/analytics",
-        sub:"Platform insights"
-      },
-
-      {
-        title:"QR Ticketing",
-        icon:<FaQrcode />,
-        path:"/qr-ticketing",
-        sub:"Event access"
-      },
-        {
-  title:"Attendance Scanner",
-  icon:<FaQrcode />,
-  path:"/attendance-scanner",
-  sub:"Scan event QR"
-},
-{
-  title:"Notifications",
-  icon:<FaBell />,
-  path:"/notifications",
-  sub:"Realtime alerts"
-},
-      {
-        title:"Settings",
-        icon:<FaCog />,
-        path:"/settings",
-        sub:"Platform settings"
-      }
-
-    ]
-
-  }
-
-  /* ========================= */
-  /* FACULTY */
-  /* ========================= */
-
-  else if(userRole === "faculty"){
-
-    navItems = [
-
-      {
-        title:"Dashboard",
-        icon:<FaChalkboardTeacher />,
-        path:"/dashboard",
-        sub:"Faculty panel"
-      },
-
-      {
-        title:"Courses",
-        icon:<FaBook />,
-        path:"/courses",
-        sub:`${coursesCount} courses`
-      },
-
-      {
-        title:"Assignments",
-        icon:<FaTasks />,
-        path:"/assignments",
-        sub:"Create tasks"
-      },
-
-      {
-        title:"Attendance",
-        icon:<FaClipboardCheck />,
-        path:"/attendance",
-        sub:"Attendance system"
-      },
-{
-  title:"Fee Management",
-  icon:<FaWallet />,
-  path:"/fees",
-  sub:"Manage payments"
+title:"Events",
+icon:<FaCalendarAlt />,
+path:"/events",
+sub:`${eventsCount} events`
 },
 
 {
-  title:"Online Classes",
-  icon:<FaVideo />,
-  path:"/online-classes",
-  sub:"Conduct live classes"
-},
-      {
-        title:"Manage Attendance",
-        icon:<FaUserCheck />,
-        path:"/manage-attendance",
-        sub:"Manage students"
-      },
-
-      {
-        title:"Progress",
-        icon:<FaChartLine />,
-        path:"/progress",
-        sub:"Student tracking"
-      },
-{
-  title:"Attendance Scanner",
-  icon:<FaQrcode />,
-  path:"/attendance-scanner",
-  sub:"Scan event QR"
-},
-{
-  title:"Notifications",
-  icon:<FaBell />,
-  path:"/notifications",
-  sub:"Realtime alerts"
-},
-      {
-        title:"Certificates",
-        icon:<FaCertificate />,
-        path:"/certificates",
-        sub:"Issue certificates"
-      },
-
-      {
-        title:"Settings",
-        icon:<FaCog />,
-        path:"/settings",
-        sub:"Faculty settings"
-      }
-
-    ]
-
-  }
-
-  /* ========================= */
-  /* STUDENT */
-  /* ========================= */
-
-else if(userRole === "student"){
-
-  navItems = [
-
-    {
-      title: "Dashboard",
-      icon: <FaUserGraduate />,
-      path: "/dashboard",
-      sub: "Student portal"
-    },
-
-    {
-      title: "Courses",
-      icon: <FaBook />,
-      path: "/courses",
-      sub: `${coursesCount} courses`
-    },
-
-    {
-      title: "Assignments",
-      icon: <FaTasks />,
-      path: "/assignments",
-      sub: "Submit tasks"
-    },
-{
-  title:"Fee Management",
-  icon:<FaWallet />,
-  path:"/fees",
-  sub:"Pay fees online"
+title:"Volunteers",
+icon:<FaUserTie />,
+path:"/volunteers",
+sub:`${volunteersCount} volunteers`
 },
 
 {
-  title:"Online Classes",
-  icon:<FaVideo />,
-  path:"/online-classes",
-  sub:"Join live classes"
+title:"Sponsors",
+icon:<FaHandshake />,
+path:"/sponsors",
+sub:`${sponsorsCount} sponsors`
 },
-    {
-      title: "Attendance",
-      icon: <FaUserCheck />,
-      path: "/my-attendance",
-      sub: "Track attendance"
-    },
 
-    {
-      title: "Progress",
-      icon: <FaChartLine />,
-      path: "/progress",
-      sub: "Performance tracking"
-    },
-
-    {
-      title: "Events",
-      icon: <FaCalendarAlt />,
-      path: "/events",
-      sub: `${eventsCount} live events`
-    },
-
-    {
-      title: "QR Tickets",
-      icon: <FaQrcode />,
-      path: "/qr-ticketing",
-      sub: "My event passes"
-    },
-
-    {
-      title: "Certificates",
-      icon: <FaCertificate />,
-      path: "/certificates",
-      sub: "Achievements"
-    },
 {
-  title:"Notifications",
-  icon:<FaBell />,
-  path:"/notifications",
-  sub:"Realtime alerts"
+title:"Analytics",
+icon:<FaChartPie />,
+path:"/analytics",
+sub:"Platform insights"
 },
-    {
-      title: "Settings",
-      icon: <FaCog />,
-      path: "/settings",
-      sub: "Account settings"
-    }
 
-  ]
+{
+title:"QR Ticketing",
+icon:<FaQrcode />,
+path:"/qr-ticketing",
+sub:"Event access"
+},
 
+{
+title:"Attendance Scanner",
+icon:<FaQrcode />,
+path:"/attendance-scanner",
+sub:"QR Check-In"
+},
+
+{
+title:"Certificates",
+icon:<FaCertificate />,
+path:"/certificates",
+sub:"Issue certificates"
+},
+
+{
+title:"Notifications",
+icon:<FaBell />,
+path:"/notifications",
+sub:"Realtime alerts"
+},
+
+{
+title:"Settings",
+icon:<FaCog />,
+path:"/settings",
+sub:"Platform settings"
 }
 
-  /* ========================= */
-  /* PARENT */
-  /* ========================= */
-
-  else if(userRole === "parent"){
-
-    navItems = [
-
-      {
-        title:"Dashboard",
-        icon:<FaUserFriends />,
-        path:"/dashboard",
-        sub:"Parent dashboard"
-      },
-
-      {
-        title:"Courses",
-        icon:<FaBook />,
-        path:"/courses",
-        sub:"Child courses"
-      },
-
-      {
-        title:"Progress",
-        icon:<FaChartLine />,
-        path:"/progress",
-        sub:"Performance tracking"
-      },
-      {
-  title:"Fee Management",
-  icon:<FaWallet />,
-  path:"/fees",
-  sub:"Pay fees online"
-},
-
-{
-  title:"Online Classes",
-  icon:<FaVideo />,
-  path:"/online-classes",
-  sub:"Join live classes"
-},
-
-      {
-        title:"Settings",
-        icon:<FaCog />,
-        path:"/settings",
-        sub:"Parent settings"
-      }
-
-    ]
+]
 
   }
 
+ 
+ 
   /* ========================= */
   /* ORGANIZER */
   /* ========================= */
@@ -586,70 +285,128 @@ else if(userRole === "student"){
 
     navItems = [
 
-      {
-        title:"Dashboard",
-        icon:<FaLayerGroup />,
-        path:"/dashboard",
-        sub:"Organizer panel"
-      },
-
-      {
-        title:"Events",
-        icon:<FaCalendarAlt />,
-        path:"/events",
-        sub:`${eventsCount} events`
-      },
-
-      {
-        title:"Volunteers",
-        icon:<FaUsers />,
-        path:"/volunteers",
-        sub:`${volunteersCount} members`
-      },
-
-      {
-        title:"Sponsors",
-        icon:<FaHandshake />,
-        path:"/sponsors",
-        sub:`${sponsorsCount} sponsors`
-      },
-
-      {
-        title:"Analytics",
-        icon:<FaChartPie />,
-        path:"/analytics",
-        sub:"Event analytics"
-      },
-
-      {
-        title:"QR Ticketing",
-        icon:<FaQrcode />,
-        path:"/qr-ticketing",
-        sub:"Smart access"
-      },
 {
-  title:"Attendance Scanner",
-  icon:<FaQrcode />,
-  path:"/attendance-scanner",
-  sub:"Scan event QR"
+title:"Dashboard",
+icon:<FaLayerGroup />,
+path:"/dashboard",
+sub:"Organizer panel"
 },
-{
-  title:"Notifications",
-  icon:<FaBell />,
-  path:"/notifications",
-  sub:"Realtime alerts"
-},
-      {
-        title:"Settings",
-        icon:<FaCog />,
-        path:"/settings",
-        sub:"Organizer settings"
-      }
 
-    ]
+{
+title:"Events",
+icon:<FaCalendarAlt />,
+path:"/events",
+sub:`${eventsCount} events`
+},
+
+{
+title:"Volunteers",
+icon:<FaUsers />,
+path:"/volunteers",
+sub:`${volunteersCount} members`
+},
+
+{
+title:"Sponsors",
+icon:<FaHandshake />,
+path:"/sponsors",
+sub:`${sponsorsCount} sponsors`
+},
+
+{
+title:"Analytics",
+icon:<FaChartPie />,
+path:"/analytics",
+sub:"Event analytics"
+},
+
+{
+title:"QR Ticketing",
+icon:<FaQrcode />,
+path:"/qr-ticketing",
+sub:"Smart access"
+},
+
+{
+title:"Attendance Scanner",
+icon:<FaQrcode />,
+path:"/attendance-scanner",
+sub:"QR Check-In"
+},
+
+{
+title:"Certificates",
+icon:<FaCertificate />,
+path:"/certificates",
+sub:"Manage certificates"
+},
+
+{
+title:"Notifications",
+icon:<FaBell />,
+path:"/notifications",
+sub:"Realtime alerts"
+},
+
+{
+title:"Settings",
+icon:<FaCog />,
+path:"/settings",
+sub:"Organizer settings"
+}
+
+]
 
   }
+else if(userRole === "student"){
 
+navItems = [
+
+{
+title:"Dashboard",
+icon:<FaUsers />,
+path:"/dashboard",
+sub:"Participant portal"
+},
+
+{
+title:"Events",
+icon:<FaCalendarAlt />,
+path:"/events",
+sub:`${eventsCount} events`
+},
+
+{
+title:"QR Tickets",
+icon:<FaQrcode />,
+path:"/qr-ticketing",
+sub:"My tickets"
+},
+
+{
+title:"Certificates",
+icon:<FaCertificate />,
+path:"/certificates",
+sub:"Achievements"
+},
+
+{
+title:"Notifications",
+icon:<FaBell />,
+path:"/notifications",
+sub:"Event updates"
+},
+
+{
+title:"Settings",
+icon:<FaCog />,
+path:"/settings",
+sub:"Account settings"
+}
+
+]
+
+}
   /* FALLBACK */
 
   else{
@@ -744,14 +501,12 @@ className="w-full lg:w-[290px] lg:min-w-[290px] lg:max-w-[290px] h-screen bg-[#f
 
             <h1 className="text-[30px] leading-none font-black tracking-[-0.06em] text-black">
 
-              EventSphere
-
+EventPILOT EMS
             </h1>
 
             <p className="mt-2 text-[9px] uppercase tracking-[0.35em] text-violet-500 font-black">
 
-              LMS PLATFORM
-
+AI POWERED EVENT MANAGEMENT SYSTEM
             </p>
 
           </div>

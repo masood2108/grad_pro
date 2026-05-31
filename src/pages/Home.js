@@ -148,11 +148,11 @@ function Home() {
           <div>
 
             <h1 className="text-3xl font-black tracking-tight">
-              EventSphere
+              EventPILOT
             </h1>
 
             <p className="text-black/40 text-sm mt-1">
-              LMS PLATFORM
+              EMS PLATFORM
             </p>
 
           </div>

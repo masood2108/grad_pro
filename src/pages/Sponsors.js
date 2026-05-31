@@ -74,6 +74,15 @@ function Sponsors() {
 
   const [logo, setLogo] =
   useState("")
+  const [industry, setIndustry] = useState("")
+const [packageType, setPackageType] = useState("Gold")
+
+const [contactPerson, setContactPerson] = useState("")
+const [contactEmail, setContactEmail] = useState("")
+const [contactPhone, setContactPhone] = useState("")
+
+const [roi, setRoi] = useState("")
+const [status, setStatus] = useState("Active")
 
   useEffect(() => {
 
@@ -143,21 +152,37 @@ function Sponsors() {
   )
 
   const platinumSponsors =
-  sponsors.filter(
-    sponsor =>
-      Number(sponsor.amount) >= 100000
-  ).length
+sponsors.filter(
+  sponsor =>
+    sponsor.packageType === "Platinum"
+).length
+const activeSponsors =
+sponsors.filter(
+  sponsor =>
+    sponsor.status === "Active"
+).length
 
   const resetForm = () => {
 
-    setName("")
-    setAmount("")
-    setWebsite("")
-    setCategory("")
-    setLogo("")
-    setEditingSponsor(null)
+  setName("")
+  setAmount("")
+  setWebsite("")
+  setCategory("")
+  setLogo("")
 
-  }
+  setIndustry("")
+  setPackageType("Gold")
+
+  setContactPerson("")
+  setContactEmail("")
+  setContactPhone("")
+
+  setRoi("")
+  setStatus("Active")
+
+  setEditingSponsor(null)
+
+}
 
   const createSponsor = async () => {
 
@@ -179,13 +204,24 @@ function Sponsors() {
         collection(db, "sponsors"),
 
         {
-          name,
-          amount: Number(amount),
-          website,
-          category,
-          logo,
-          createdAt: serverTimestamp()
-        }
+  name,
+  amount: Number(amount),
+  website,
+  category,
+  logo,
+
+  industry,
+  packageType,
+
+  contactPerson,
+  contactEmail,
+  contactPhone,
+
+  roi: Number(roi || 0),
+  status,
+
+  createdAt: serverTimestamp()
+}
 
       )
 
@@ -220,11 +256,21 @@ function Sponsors() {
         doc(db, "sponsors", editingSponsor.id),
 
         {
-          name,
-          amount: Number(amount),
-          website,
-          category,
-          logo
+  name,
+  amount: Number(amount),
+  website,
+  category,
+  logo,
+
+  industry,
+  packageType,
+
+  contactPerson,
+  contactEmail,
+  contactPhone,
+
+  roi: Number(roi || 0),
+  status
         }
 
       )
@@ -274,19 +320,29 @@ function Sponsors() {
 
   }
 
-  const editSponsor = (sponsor) => {
+ const editSponsor = (sponsor) => {
 
-    setEditingSponsor(sponsor)
+  setEditingSponsor(sponsor)
 
-    setName(sponsor.name || "")
-    setAmount(sponsor.amount || "")
-    setWebsite(sponsor.website || "")
-    setCategory(sponsor.category || "")
-    setLogo(sponsor.logo || "")
+  setName(sponsor.name || "")
+  setAmount(sponsor.amount || "")
+  setWebsite(sponsor.website || "")
+  setCategory(sponsor.category || "")
+  setLogo(sponsor.logo || "")
 
-    setShowModal(true)
+  setIndustry(sponsor.industry || "")
+  setPackageType(sponsor.packageType || "Gold")
 
-  }
+  setContactPerson(sponsor.contactPerson || "")
+  setContactEmail(sponsor.contactEmail || "")
+  setContactPhone(sponsor.contactPhone || "")
+
+  setRoi(sponsor.roi || "")
+  setStatus(sponsor.status || "Active")
+
+  setShowModal(true)
+
+}
 
   return (
 
@@ -492,12 +548,12 @@ function Sponsors() {
 
             <ModernStatCard
 
-              title="Growth"
-              value="+24%"
-              icon={<FaArrowUp />}
-              color="cyan"
+  title="Active Sponsors"
+  value={activeSponsors}
+  icon={<FaArrowUp />}
+  color="cyan"
 
-            />
+/>
 
           </div>
 
@@ -618,8 +674,8 @@ function Sponsors() {
 
                                   <FaCheckCircle />
 
-                                  Active
-                                </div>
+{sponsor.status || "Active"}                               
+ </div>
 
                                 <h1 className="text-3xl font-black mt-4">
 
@@ -786,8 +842,7 @@ function Sponsors() {
 
         showModal &&
 
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-xl z-[99999] flex items-center justify-center p-4">
-
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-xl z-[99999] flex items-center justify-center p-4 overflow-y-auto">
           <motion.div
 
             initial={{
@@ -802,7 +857,7 @@ function Sponsors() {
               y:0
             }}
 
-            className="w-full max-w-[700px] rounded-[45px] bg-white p-10 relative overflow-hidden shadow-[0_40px_120px_rgba(0,0,0,0.18)]"
+            className="w-full max-w-[540px] rounded-[24px] bg-white p-10 relative overflow-hidden shadow-[0_40px_120px_rgba(0,0,0,0.18)]"
 
           >
 
@@ -823,7 +878,7 @@ function Sponsors() {
                     Sponsor Portal
                   </div>
 
-                  <h1 className="text-5xl font-black mt-6">
+                  <h1 className="text-3xl font-black mt-4">
 
                     {
 
@@ -904,8 +959,7 @@ function Sponsors() {
               }
 
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                 <InputField
                   label="Sponsor Name"
                   value={name}
@@ -919,7 +973,52 @@ function Sponsors() {
                   setValue={setCategory}
                   placeholder="Technology Partner"
                 />
+                <InputField
+  label="Industry"
+  value={industry}
+  setValue={setIndustry}
+  placeholder="Technology"
+/>
 
+<select
+  value={packageType}
+  onChange={(e) =>
+    setPackageType(e.target.value)
+  }
+className="w-full h-[56px] px-5 rounded-[18px] bg-[#f6efe7] border border-black/5">
+  <option>Platinum</option>
+  <option>Gold</option>
+  <option>Silver</option>
+  <option>Community Partner</option>
+</select>
+
+<InputField
+  label="Contact Person"
+  value={contactPerson}
+  setValue={setContactPerson}
+  placeholder="John Doe"
+/>
+
+<InputField
+  label="Contact Email"
+  value={contactEmail}
+  setValue={setContactEmail}
+  placeholder="john@company.com"
+/>
+
+<InputField
+  label="Contact Phone"
+  value={contactPhone}
+  setValue={setContactPhone}
+  placeholder="+91 9876543210"
+/>
+
+<InputField
+  label="ROI Score (%)"
+  value={roi}
+  setValue={setRoi}
+  placeholder="85"
+/>
                 <InputField
                   label="Website"
                   value={website}
@@ -1153,7 +1252,7 @@ function InputField({
 
     <div>
 
-      <p className="uppercase tracking-[0.22em] text-[10px] font-black text-black/35 mb-4">
+      <p className="uppercase tracking-[0.18em] text-[10px] font-black text-black/35 mb-2">
 
         {label}
       </p>
@@ -1170,8 +1269,7 @@ function InputField({
 
         placeholder={placeholder}
 
-        className="w-full h-[72px] px-6 rounded-[28px] bg-[#f6efe7] border border-black/5 outline-none text-lg font-semibold"
-
+className="w-full h-[40px] px-5 rounded-[18px] bg-[#f6efe7] border border-black/5 outline-none text-base font-medium"
       />
 
     </div>

@@ -10,8 +10,11 @@ import {
   getDoc,
   doc,
   updateDoc,
-  deleteDoc
-} from "firebase/firestore"
+  deleteDoc,
+  getDocs,
+  query,
+  where
+}from "firebase/firestore"
 import {
   db,
   auth
@@ -41,6 +44,9 @@ import {
 } from "react-icons/fa"
 
 function Certificates() {
+  const [events, setEvents] = useState([])
+const [selectedEvent, setSelectedEvent] = useState("")
+const [participants, setParticipants] = useState([])
 
   const [certificates, setCertificates] =
   useState([])
@@ -176,6 +182,36 @@ function Certificates() {
     setFilteredCertificates(updated)
 
   }, [certificates, search])
+  useEffect(() => {
+
+  const unsubscribe = onSnapshot(
+
+    collection(db, "events"),
+
+    (snapshot) => {
+
+      const data = []
+
+      snapshot.forEach((doc) => {
+
+        data.push({
+
+          id: doc.id,
+          ...doc.data()
+
+        })
+
+      })
+
+      setEvents(data)
+
+    }
+
+  )
+
+  return () => unsubscribe()
+
+}, [])
 
   const resetForm = () => {
 
@@ -186,6 +222,43 @@ function Certificates() {
     setEditingCertificate(null)
 
   }
+  const loadParticipants = async(eventId) => {
+
+  const registrations = await getDocs(
+
+    query(
+
+      collection(
+        db,
+        "eventRegistrations"
+      ),
+
+      where(
+        "eventId",
+        "==",
+        eventId
+      )
+
+    )
+
+  )
+
+  const data = []
+
+  registrations.forEach((doc) => {
+
+    data.push({
+
+      id: doc.id,
+      ...doc.data()
+
+    })
+
+  })
+
+  setParticipants(data)
+
+}
 
   const createCertificate = async() => {
 
@@ -378,6 +451,72 @@ function Certificates() {
     )
 
   }
+  const generateCertificatesForEvent = async() => {
+
+  if(!selectedEvent){
+
+    return alert(
+      "Select Event"
+    )
+
+  }
+
+  const selectedEventData =
+  events.find(
+
+    (event)=>
+      event.id === selectedEvent
+
+  )
+
+  for(
+
+    const participant
+    of participants
+
+  ){
+
+    await addDoc(
+
+      collection(
+        db,
+        "certificates"
+      ),
+
+      {
+
+        name:
+        participant.name,
+
+        email:
+        participant.email,
+
+        event:
+        selectedEventData.title,
+
+        date:
+        new Date()
+        .toISOString()
+        .split("T")[0],
+
+        verified:true,
+
+        createdAt:
+        serverTimestamp()
+
+      }
+
+    )
+
+  }
+
+  alert(
+    "Certificates Generated"
+  )
+
+  setShowModal(false)
+
+}
 
   return (
 
@@ -791,65 +930,66 @@ function Certificates() {
       </div>
 
 
-      <div className="p-8 space-y-5">
+<div className="p-8 space-y-5">
 
-        <input
+  <select
 
-          value={studentName}
+    value={selectedEvent}
 
-          onChange={(e)=>
-            setStudentName(e.target.value)
-          }
+    onChange={(e)=>{
 
-          placeholder="Student Name"
+      setSelectedEvent(
+        e.target.value
+      )
 
-          className="w-full h-[58px] px-5 rounded-[20px] bg-[#f7f4f1] border border-black/5 outline-none text-black"
+      loadParticipants(
+        e.target.value
+      )
 
-        />
+    }}
 
-        <input
+    className="w-full h-[58px] px-5 rounded-[20px] bg-[#f7f4f1] border border-black/5 outline-none"
 
-          value={studentEmail}
+  >
 
-          onChange={(e)=>
-            setStudentEmail(e.target.value)
-          }
+    <option value="">
+      Select Event
+    </option>
 
-          placeholder="Student Email"
+    {
 
-          type="email"
+      events.map((event)=>(
 
-          className="w-full h-[58px] px-5 rounded-[20px] bg-[#f7f4f1] border border-black/5 outline-none text-black"
+        <option
+          key={event.id}
+          value={event.id}
+        >
 
-        />
+          {event.title}
 
-        <input
+        </option>
 
-          value={eventName}
+      ))
 
-          onChange={(e)=>
-            setEventName(e.target.value)
-          }
+    }
 
-          placeholder="Event Name"
+  </select>
 
-          className="w-full h-[58px] px-5 rounded-[20px] bg-[#f7f4f1] border border-black/5 outline-none text-black"
+  <div className="rounded-[20px] bg-[#f7f4f1] p-5 border border-black/5">
 
-        />
+    <h1 className="font-black text-xl">
 
-        <input
+      Registered Participants
 
-          type="date"
+    </h1>
 
-          value={certificateDate}
+    <p className="mt-2 text-black/50">
 
-          onChange={(e)=>
-            setCertificateDate(e.target.value)
-          }
+      {participants.length} students found
 
-          className="w-full h-[58px] px-5 rounded-[20px] bg-[#f7f4f1] border border-black/5 outline-none text-black"
+    </p>
 
-        />
+  </div>
 
         <motion.button
 
@@ -861,19 +1001,7 @@ function Certificates() {
             scale:0.98
           }}
 
-          onClick={
-
-            editingCertificate
-
-            ?
-
-            updateCertificate
-
-            :
-
-            createCertificate
-
-          }
+          onClick={generateCertificatesForEvent}
 
           className="w-full h-[62px] rounded-[22px] bg-black text-white font-black text-lg shadow-[0_20px_50px_rgba(0,0,0,0.12)]"
 

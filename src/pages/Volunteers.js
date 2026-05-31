@@ -416,24 +416,22 @@ function Volunteers() {
 
                   <FaBolt />
 
-                  Volunteer Hub
-
+Volunteer Management
                 </div>
 
                 <h1 className="text-6xl md:text-8xl leading-[0.9] tracking-[-0.08em] font-black mt-8">
 
-                  Elite
+                  Volunteer
                   <br />
-                  Volunteers
-
+ Management System
                 </h1>
 
                 <p className="text-white/55 text-2xl mt-8 max-w-3xl leading-relaxed">
 
-                  Manage volunteer teams,
-                  realtime analytics,
-                  performance points
-                  and smart event assignments.
+                 Manage volunteer recruitment,
+event assignments,
+performance tracking
+and volunteer operations.
 
                 </p>
 
@@ -458,8 +456,7 @@ function Volunteers() {
 
                   <HeroMiniCard
 
-                    title="Points"
-                    value={totalPoints}
+title="Performance Score"                    value={totalPoints}
                     icon={<FaTrophy />}
 
                   />
@@ -542,7 +539,7 @@ function Volunteers() {
 
               <FaPlus />
 
-              Add Volunteer
+              Hire Volunteer
 
             </motion.button>
 
@@ -726,7 +723,7 @@ function Volunteers() {
 
                                 <p className="uppercase tracking-[0.22em] text-[10px] font-black text-white/40">
 
-                                  Contribution Points
+                                  Performance Score
                                 </p>
 
                                 <h1 className="text-5xl font-black mt-3">
